@@ -9,13 +9,14 @@
 <body>
 	<!-- the entire body must be written by student -->
 	 <div id="buttons">
-        <button class="btn" id="applause">applause</button>
-        <button class="btn" id="boo">boo</button>
-        <button class="btn" id="gasp">gasp</button>
-        <button class="btn" id="tada">tada</button>
-        <button class="btn" id="victory">victory</button>
-        <button class="btn" id="wrong">wrong</button>
-        <button class="stop" id="stop">stop</button>
+		 <audio id='audio'></audio>
+        <button onclick='play("sounds/applause.mp3")' class="btn">applause</button>
+        <button onclick='play("sounds/bo3o.mp3")' class="btn">boo</button>
+        <button onclick='play("sounds/gasp.mp")' class="btn">gasp</button>
+        <button onclick='play("sounds/tada.mp3")' class="btn">tada</button>
+        <button onclick='play("sounds/victory.mp3")' class="btn">victory</button>
+        <button onclick='play("sounds/wrong.mp3")' class="btn">wrong</button>
+        <button onclick='stop()' class="stop btn">stop</button>
     </div>
     <script type="text/javascript" src="./script.js">
 </script>

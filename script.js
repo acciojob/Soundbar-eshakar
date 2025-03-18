@@ -1,25 +1,60 @@
 //your JS code here. If required.
-const buttons = document.querySelectorAll('.btn');
-const stopButton = document.querySelector('.stop');
-let currentAudio = null;
+let myaudio  = new Audio();
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Stop any currently playing audio
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-        }
+function applause() {
+	myaudio.src = "./sounds/sound1";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
 
-        // Create a new audio element for the clicked button
-        currentAudio = new Audio(button.getAttribute('data-sound'));
-        currentAudio.play();
-    });
-});
+function boo() {
+	myaudio.src = "./sounds/sound2";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
 
-stopButton.addEventListener('click', () => {
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-    }
-});
+function gasp() {
+	myaudio.src = "./sounds/sound3";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
+
+function tada() {
+	myaudio.src = "./sounds/sound4";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
+
+function victory() {
+	myaudio.src = "./sounds/sound5";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
+
+function wrong() {
+	myaudio.src = "./sounds/sound6";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
+
+function stop() {
+	myaudio.src = "./sounds/sound7";
+	myaudio.currentTime = 0;
+	myaudio.play();
+}
+
+
+function stop() {
+	myaudio.pause();
+}
+
+const audio = document.getElementById("audio");
+
+function play(src) {
+	audio.src=src;
+	audio.play();
+}
+
+function stop() {
+	audio.pause();
+}
